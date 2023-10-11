@@ -1,0 +1,23 @@
+<nav class="navigation-bar">
+    <a href="#" class="navbar-title-link">
+        <h1>To Do List</h1>
+    </a>
+
+    <div class="hamburger-custom" (click)="toggleDropdownMenu()">
+        <div class="hamburger-lines">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </div>
+    </div>
+
+    <ul class="dropdown-menu-custom" [class.display-dropdown]="dropDownVisible">
+        <li class="main-menu-item" (click)="toggleDropdownMenu()">x</li>
+        <li class="main-menu-item"><a href="#">Home</a></li>
+        <li class="main-menu-item"><a href="#list">Create new list</a></li>
+        <li class="main-menu-item"><a href="#tips">Tips</a></li>
+        <li class="main-menu-item"><a href="#faq">FAQ</a></li>
+        <li class="main-menu-item"><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+

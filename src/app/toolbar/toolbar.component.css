@@ -1,0 +1,109 @@
+.navigation-bar {
+    position: sticky;
+    top: 0;
+    background-color: green;
+    z-index: 200;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+
+.navigation-bar a {
+    text-decoration: none;
+    color: white;
+}
+
+.navigation-bar a h1 {
+    padding: 0 10px;
+    margin: auto
+}
+
+.navigation-bar .dropdown-menu-custom {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: rgb(7, 110, 7);
+    text-align: right;
+    width: 40%;
+    margin-top: auto;
+    list-style-type: none;
+}
+
+.display-dropdown {
+    display: none;
+}
+
+.navigation-bar .dropdown-menu-custom .main-menu-item {
+    margin-right: 24px;
+    margin-bottom: 16px;
+    font-size: 30px;
+}
+
+.navigation-bar .dropdown-menu-custom .main-menu-item a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+
+}
+
+.navigation-bar .dropdown-menu-custom .main-menu-item:first-child {
+    color: white;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.navigation-bar .hamburger-custom {
+    position: fixed;
+    right: 26px;
+    top: 43px;
+    cursor: pointer;
+}
+
+
+.navigation-bar .hamburger-custom .hamburger-lines {
+    display: flex;
+    width: 30px;
+    flex-wrap: wrap;
+    height: 1em;
+    align-content: space-between;
+}
+
+.navigation-bar .hamburger-custom .hamburger-lines .hamburger-line {
+    height: 4px;
+    background-color: white;
+    display: block;
+    margin-bottom: 4px;
+    width: 30px;
+}
+
+
+@media (min-width: 992px) {
+
+    .navigation-bar .dropdown-menu-custom {
+        display: inline-block;
+        position: relative;
+        order: 1;
+        background-color: transparent;
+        text-align: left;
+        width: 70%;
+        padding-inline-start: 20px;
+    }
+
+
+    .navigation-bar .dropdown-menu-custom .main-menu-item {
+        display: inline;
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    .navigation-bar .dropdown-menu-custom .main-menu-item:first-child {
+        display: none;
+    }
+
+    .navigation-bar .hamburger-custom {
+        visibility: hidden;
+        order: 2
+    }
+}
