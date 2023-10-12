@@ -1,10 +1,21 @@
-p span {
+li {
+    background-color: #004080;
+    color: white;
+    margin-top: 10px;
+    border-radius: 10px;
+    font-weight: 300;
+    padding: 12px 0;
+    position: relative;
+}
+
+li span {
     font-weight: 700;
     font-size: 13px;
     padding-left: 8px;
+    position: absolute;
 }
 
-p span:hover {
+li span:hover {
     font-weight: 1000;
     font-size: 14px;
 }

@@ -9,7 +9,7 @@ import { TaskItem } from './task-item';
 
 export class AppComponent {
   title = 'todo-app';
-  taskList: TaskItem [] = [];
+  taskList: TaskItem[] = [];
 
   addTask(text: string) {
     if (text) {
@@ -19,7 +19,6 @@ export class AppComponent {
           text: text
         }
       )
-      console.log(this.taskList)
     }
   }
 
