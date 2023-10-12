@@ -22,4 +22,8 @@ export class AppComponent {
       console.log(this.taskList)
     }
   }
+
+  deleteTask(id: number) {
+    this.taskList = this.taskList.filter(task => task.id !== id);
+  }
 }

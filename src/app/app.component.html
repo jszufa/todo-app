@@ -7,7 +7,7 @@
     <input id="task" type="text" #newTask>
   </div>
   <ul class="tasks-list">
-    <app-task-component *ngFor="let task of taskList" [task]="task"></app-task-component>
+    <app-task-component *ngFor="let task of taskList" [task]="task" (newDeleteEvent)="deleteTask($event)"></app-task-component>
   </ul>
   
 </section>
