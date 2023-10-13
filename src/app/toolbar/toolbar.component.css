@@ -1,7 +1,7 @@
 .navigation-bar {
     position: sticky;
     top: 0;
-    background-color: green;
+    background-color: #008000;
     z-index: 200;
     margin-bottom: 30px;
     display: flex;

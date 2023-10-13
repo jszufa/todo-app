@@ -1,11 +1,13 @@
 li {
-    background-color: #004080;
-    color: white;
+    background-color: white;
+    color: #004080;
     margin-top: 10px;
+    border: 3px solid #004080;
     border-radius: 10px;
-    font-weight: 300;
+    font-weight: 500;
     padding: 12px 0;
     position: relative;
+    cursor: move;
 }
 
 li span {
@@ -29,6 +31,7 @@ li .task-checkbox {
     top: 12px;
     height: 20px;
     width: 20px;
+    color: #004080;
 }
 
 li .task-checkbox:hover {
@@ -36,6 +39,23 @@ li .task-checkbox:hover {
 }
 
 .inactive {
-   /*  background-color: #804000; */
+    /*  background-color: #804000; */
     opacity: 0.5;
+}
+
+.cdk-drag-preview {
+    box-sizing: border-box;
+    box-shadow: 0 6px 6px -4px rgba(0, 0, 0, 0.2),
+                0 9px 11px 2px rgba(0, 0, 0, 0.14),
+                0 4px 15px 3px rgba(0, 0, 0, 0.12);
+    text-align: center;
+    list-style: none;
+  }
+
+.cdk-drag-placeholder {
+    opacity: 0;
+}
+
+.cdk-drag-animating {
+    transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
 }

@@ -8,6 +8,7 @@ import { TaskItem } from '../task-item';
 })
 export class TaskComponentComponent {
   @Input() task!: TaskItem;
+  
   @Output() newDeleteEvent = new EventEmitter<number>();
 
   isChecked: boolean = false;

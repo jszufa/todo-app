@@ -6,7 +6,7 @@
     <input id="task" type="text" #newTask>
     <button class="add-task-btn" (click)="addTask(newTask.value); newTask.value=''">Add task</button>
   </div>
-  <ul class="tasks-list">
+  <ul cdkDropList class="tasks-list" (cdkDropListDropped)="drop($event)">
     <app-task-component *ngFor="let task of taskList" [task]="task" (newDeleteEvent)="deleteTask($event)"></app-task-component>
   </ul>
   
