@@ -32,6 +32,7 @@ export class AppComponent {
   }
 
   moveTaskDown(id: number) {
+    console.log('wywołano moveTaskDown')
     const task: TaskItem | undefined = this.taskList.find(task => task.id === id);
     if (task) {
       const currentIndex = this.taskList.indexOf(task);

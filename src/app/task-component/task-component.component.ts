@@ -8,7 +8,9 @@ import { TaskItem } from '../task-item';
 })
 export class TaskComponentComponent {
   @Input() task!: TaskItem;
-  
+
+  //czy na pewno jest ok? Nie - trzeba dodać przekazywanie id przy kliknięciu...
+  @Input() callback!: (id: number) => void;
   @Output() newDeleteEvent = new EventEmitter<number>();
 
   isChecked: boolean = false;
