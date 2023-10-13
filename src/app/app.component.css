@@ -16,8 +16,9 @@ h1 {
 
 .add-task-holder #task {
     margin-right: 10px;
-    font-size: 18px;
+    font-size: 14px;
     padding: 5px 5px;
+
 }
 
 .add-task-holder .add-task-btn {

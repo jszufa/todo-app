@@ -4,7 +4,7 @@
 <section class="tasks-section">
   <div class="add-task-holder">
     <input id="task" type="text" #newTask>
-    <button class="add-task-btn" (click)="addTask(newTask.value)">Add task</button>
+    <button class="add-task-btn" (click)="addTask(newTask.value); newTask.value=''">Add task</button>
   </div>
   <ul class="tasks-list">
     <app-task-component *ngFor="let task of taskList" [task]="task" (newDeleteEvent)="deleteTask($event)"></app-task-component>

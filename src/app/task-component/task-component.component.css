@@ -13,9 +13,29 @@ li span {
     font-size: 13px;
     padding-left: 8px;
     position: absolute;
+    right: 10px;
+    top: 5px;
 }
 
 li span:hover {
     font-weight: 1000;
     font-size: 14px;
+    cursor: pointer;
+}
+
+li .task-checkbox {
+    position: absolute;
+    left: 10px;
+    top: 12px;
+    height: 20px;
+    width: 20px;
+}
+
+li .task-checkbox:hover {
+    cursor: pointer;
+}
+
+.inactive {
+   /*  background-color: #804000; */
+    opacity: 0.5;
 }

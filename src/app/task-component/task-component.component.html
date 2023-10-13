@@ -1,1 +1,4 @@
-<li>{{task.text}} <span (click)="deleteTask(task.id)">X</span></li>
+<li [class.inactive]="isChecked">
+    <input type="checkbox" [(ngModel)]="isChecked" class="task-checkbox" >
+    {{task.text}} <span (click)="deleteTask(task.id)">X</span>
+</li>
