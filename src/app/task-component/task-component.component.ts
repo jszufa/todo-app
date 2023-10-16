@@ -13,8 +13,6 @@ export class TaskComponentComponent {
   @Input() callback!: (id: number) => void;
   @Output() newDeleteEvent = new EventEmitter<number>();
 
-  isChecked: boolean = false;
-
   deleteTask(id: number) {
     this.newDeleteEvent.emit(id);
   }

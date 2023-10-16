@@ -7,7 +7,7 @@
     <button class="add-task-btn" (click)="addTask(newTask.value); newTask.value=''">Add task</button>
   </div>
   <ul cdkDropList class="tasks-list" (cdkDropListDropped)="drop($event)">
-    <app-task-component *ngFor="let task of taskList" [task]="task" (newDeleteEvent)="deleteTask($event)" [callback]="moveTaskDown"></app-task-component>
+    <app-task-component *ngFor="let task of taskList" [task]="task" (newDeleteEvent)="deleteTask($event)" [callback]="moveTask"></app-task-component>
   </ul>
   
 </section>

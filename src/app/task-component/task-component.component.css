@@ -10,6 +10,11 @@ li {
     cursor: move;
 }
 
+li {
+    transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+    /* Other styling here */
+  }
+
 li span {
     font-weight: 700;
     font-size: 13px;

@@ -1,4 +1,4 @@
-<li cdkDrag [class.inactive]="isChecked">
-    <input type="checkbox" [(ngModel)]="isChecked" class="task-checkbox" (click)="callback">
+<li cdkDrag [class.inactive]="task.checked">
+    <input type="checkbox" [(ngModel)]="task.checked" class="task-checkbox" (click)="callback(task.id)">
     {{task.text}} <span (click)="deleteTask(task.id)">X</span>
 </li>
