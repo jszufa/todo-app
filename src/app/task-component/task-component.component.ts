@@ -16,4 +16,9 @@ export class TaskComponentComponent {
   deleteTask(id: number) {
     this.newDeleteEvent.emit(id);
   }
+
+  editTask(task:TaskItem) {
+    console.log(task);
+    task.editing = true;
+  }
 }

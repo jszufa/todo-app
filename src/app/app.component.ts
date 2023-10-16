@@ -21,11 +21,12 @@ export class AppComponent {
 
   addTask(text: string) {
     if (text) {
-      this.taskList.push(
+      this.taskList.unshift(
         {
           id: Date.now(),
           text: text,
-          checked: false
+          checked: false,
+          editing: false
         }
       );
       this.dataSave();
@@ -46,6 +47,7 @@ export class AppComponent {
 
     const task: TaskItem | undefined = this.taskList.find(task => task.id === id);
     if (task) {
+
       const currentIndex = this.taskList.indexOf(task);
       if (currentIndex === this.taskList.length - 1 && !task.checked) { return };
 
@@ -61,6 +63,6 @@ export class AppComponent {
       ];
     }
   }
-
-
 }
+
+//czemu jestem jedno kliknięcie wstecz jeśli chodzi o stan checked?
