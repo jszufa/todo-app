@@ -8,19 +8,24 @@ import { AppComponent } from './app.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { TaskComponentComponent } from './task-component/task-component.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AutofocusDirective } from './autofocus.directive';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     ToolbarComponent,
-    TaskComponentComponent
+    TaskComponentComponent,
+    AutofocusDirective
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     BrowserAnimationsModule,
-    DragDropModule
+    DragDropModule,
+    
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

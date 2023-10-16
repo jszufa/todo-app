@@ -1,4 +1,5 @@
-import { Component, Input, Output, EventEmitter, } from '@angular/core';
+import { Component, Input, Output, EventEmitter, ViewChild, ElementRef, TemplateRef } from '@angular/core';
+import { AutofocusDirective } from '../autofocus.directive';
 import { TaskItem } from '../task-item';
 
 @Component({
@@ -17,8 +18,11 @@ export class TaskComponentComponent {
     this.newDeleteEvent.emit(id);
   }
 
-  editTask(task:TaskItem) {
-    console.log(task);
+  editTask(task:TaskItem): void {
     task.editing = true;
+  }
+
+  finishEditing(task: TaskItem): void {
+    task.editing = false;
   }
 }

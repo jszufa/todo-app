@@ -1,9 +1,8 @@
 <li cdkDrag [class.inactive]="task.checked">
     <input type="checkbox" [(ngModel)]="task.checked" class="task-checkbox" (click)="callback(task.id)">
-    <div (dblclick)="editTask(task)">{{task.text}}</div>
-
+    <div class="task-text" *ngIf="!task.editing; else editingTask" (dblclick)="editTask(task)">{{task.text}}</div>
     <ng-template #editingTask>
-        <input type="text" class="task-edit" [(ngModel)]="task.text">
+        <input type="text" class="task-edit" [(ngModel)]="task.text" (blur)="finishEditing(task)" (keyup.enter)="finishEditing(task)" autofocus>
     </ng-template>
     <span (click)="deleteTask(task.id)">X</span>
 </li>
